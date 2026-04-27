@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Euclid Prep</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="page">
+      <header class="hero">
+        <div class="hero__text">
+          <p class="eyebrow">Math Contest Practice</p>
+          <h1>Euclid Prep</h1>
+          <p class="hero__subtitle">
+            Practice Euclid-style problems with filters, hints, a session
+            timer, and progress tracking.
+          </p>
+        </div>
+      </header>
+
+      <main class="layout">
+        <section class="panel controls">
+          <h2>Practice Controls</h2>
+
+          <div class="filters">
+            <div class="field">
+              <label for="topicFilter">Topic</label>
+              <select id="topicFilter">
+                <option value="all">All topics</option>
+                <option value="algebra">Algebra</option>
+                <option value="geometry">Geometry</option>
+                <option value="number-theory">Number Theory</option>
+                <option value="combinatorics">Combinatorics</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="difficultyFilter">Difficulty</label>
+              <select id="difficultyFilter">
+                <option value="all">All difficulties</option>
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="timer-box">
+            <div>
+              <p class="timer-label">Session Timer</p>
+              <p id="timerDisplay" class="timer-display">15:00</p>
+            </div>
+
+            <div class="timer-buttons">
+              <button id="startTimerBtn" class="btn btn--primary">
+                Start
+              </button>
+              <button id="pauseTimerBtn" class="btn btn--secondary">
+                Pause
+              </button>
+              <button id="resetTimerBtn" class="btn btn--secondary">
+                Reset
+              </button>
+            </div>
+          </div>
+
+          <div class="control-buttons">
+            <button id="newProblemBtn" class="btn btn--primary">
+              New Problem
+            </button>
+            <button id="resetProgressBtn" class="btn btn--danger">
+              Reset Progress
+            </button>
+          </div>
+        </section>
+
+        <section class="panel stats">
+          <h2>Your Progress</h2>
+
+          <div class="stats-grid">
+            <div class="stat-card">
+              <p class="stat-card__label">Attempted</p>
+              <p id="attemptedStat" class="stat-card__value">0</p>
+            </div>
+
+            <div class="stat-card">
+              <p class="stat-card__label">Correct</p>
+              <p id="correctStat" class="stat-card__value">0</p>
+            </div>
+
+            <div class="stat-card">
+              <p class="stat-card__label">Accuracy</p>
+              <p id="accuracyStat" class="stat-card__value">0%</p>
+            </div>
+
+            <div class="stat-card">
+              <p class="stat-card__label">Current Streak</p>
+              <p id="streakStat" class="stat-card__value">0</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel problem-panel">
+          <div class="problem-meta">
+            <span id="problemTopic" class="badge">Topic</span>
+            <span id="problemDifficulty" class="badge badge--dark">
+              Difficulty
+            </span>
+          </div>
+
+          <h2 id="problemTitle" class="problem-title">
+            Your problem will appear here
+          </h2>
+
+          <p id="problemText" class="problem-text">
+            Click "New Problem" to begin.
+          </p>
+
+          <div class="answer-area">
+            <label for="answerInput">Your answer</label>
+            <input
+              id="answerInput"
+              type="text"
+              placeholder="Type your answer here"
+            />
+          </div>
+
+          <div class="problem-buttons">
+            <button id="submitBtn" class="btn btn--primary">
+              Submit Answer
+            </button>
+            <button id="hintBtn" class="btn btn--secondary">
+              Show Hint
+            </button>
+            <button id="solutionBtn" class="btn btn--secondary">
+              Reveal Solution
+            </button>
+          </div>
+
+          <div id="feedbackBox" class="feedback hidden"></div>
+          <div id="hintBox" class="hint-box hidden"></div>
+          <div id="solutionBox" class="solution-box hidden"></div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
