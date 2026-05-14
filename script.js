@@ -244,6 +244,7 @@ function generateLinearEquationProblem() {
 
 const topicFilter = document.getElementById("topicFilter");
 const difficultyFilter = document.getElementById("difficultyFilter");
+const sessionLengthSelect = document.getElementById("sessionLength");
 const timerDisplay = document.getElementById("timerDisplay");
 const startTimerBtn = document.getElementById("startTimerBtn");
 const pauseTimerBtn = document.getElementById("pauseTimerBtn");
@@ -268,7 +269,7 @@ const streakStat = document.getElementById("streakStat");
 
 let currentProblem = null;
 let questionLocked = false;
-let timeLeft = 15 * 60;
+let timeLeft = Number(sessionLengthSelect.value) * 60;
 let timerInterval = null;
 
 const savedProgress =
@@ -295,6 +296,9 @@ function updateStats() {
       : Math.round((progress.correct / progress.attempted) * 100);
 
   accuracyStat.textContent = `${accuracy}%`;
+}
+function getSelectedDurationInSeconds() {
+  return Number(sessionLengthSelect.value) * 60;
 }
 
 function updateTimerDisplay() {
@@ -491,7 +495,7 @@ function pauseTimer() {
 
 function resetTimer() {
   pauseTimer();
-  timeLeft = 15 * 60;
+  timeLeft = getSelectedDurationInSeconds();
   updateTimerDisplay();
 }
 
@@ -508,6 +512,7 @@ function resetProgress() {
 
 topicFilter.addEventListener("change", pickRandomProblem);
 difficultyFilter.addEventListener("change", pickRandomProblem);
+sessionLengthSelect.addEventListener("change", resetTimer);
 newProblemBtn.addEventListener("click", pickRandomProblem);
 submitBtn.addEventListener("click", submitAnswer);
 hintBtn.addEventListener("click", showHint);
