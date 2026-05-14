@@ -4,12 +4,12 @@ const problems = [
     title: "Algebra Drill 1",
     topic: "algebra",
     difficulty: "easy",
-    text: "If x + 1/x = 3, find x^2 + 1/x^2.",
-    answer: "7",
-    hint: "Square both sides, then subtract 2.",
+    text: "If 4(x-2) = 2(x-4), what is the value of x?",
+    answer: "x = 0",
+    hint: "Expand the equations, then solve.",
     solution:
-      "Square both sides: (x + 1/x)^2 = x^2 + 2 + 1/x^2 = 9. " +
-      "So x^2 + 1/x^2 = 7.",
+      "Since 4(x+2) = 2(x-4), then 4x-8 = 2x-8." +
+      "This means that 2x = 0, therefore x = 0.",
   },
   {
     id: 2,
@@ -54,11 +54,12 @@ const problems = [
     title: "Algebra Drill 2",
     topic: "algebra",
     difficulty: "medium",
-    text: "If a + b = 10 and ab = 21, what is a^2 + b^2?",
-    answer: "58",
+    text: "If 2x = 9, what is the value of 2^(6x-23)?",
+    answer: "16",
     hint: "Use a^2 + b^2 = (a + b)^2 - 2ab.",
     solution:
-      "a^2 + b^2 = (a + b)^2 - 2ab = 10^2 - 2(21) = 100 - 42 = 58.",
+      "Method 1: If 2x = 9, then 6x = (3)(2x) = (3)(9) = 27. This means that 2^(6x-23) = 2^(4) = 16." +
+      "Method 2: if 2x = 9, then x = 9/2. Therefore, 6x-23 = 6(9/2)-23 = 4. Thus, 2^(4) = 16.",
   },
   {
     id: 6,
@@ -101,11 +102,12 @@ const problems = [
     title: "Algebra Drill 3",
     topic: "algebra",
     difficulty: "hard",
-    text: "If x - 1/x = 4, find x^2 + 1/x^2.",
-    answer: "18",
-    hint: "Square both sides, then add 2.",
+    text: "There is one positive integer, K, for which 3<$\sqrt{K^(2)+4}<4. What is this positive integer K?",
+    answer: "K = 3",
+    hint: "Square each part, then solve.",
     solution:
-      "(x - 1/x)^2 = x^2 - 2 + 1/x^2 = 16, so x^2 + 1/x^2 = 18.",
+      "Since 3<$\sqrt{K^(2)+4}<4, then 3^(2)<K^(2)+4<4^(4). Therefore, 9<K^(2)+4<16, and so 5<K^(2)<12." +
+      "Since K is a positive integer whose square is is between 5 and 12, K = 3.",
   },
   {
     id: 10,
