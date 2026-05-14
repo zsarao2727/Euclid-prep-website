@@ -5,7 +5,7 @@ const problems = [
     topic: "algebra",
     difficulty: "easy",
     text: "If 4(x-2) = 2(x-4), what is the value of x?",
-    answer: "x = 0",
+    answer: "x = 0" | "0",
     hint: "Expand the equations, then solve.",
     solution:
       "Since 4(x+2) = 2(x-4), then 4x-8 = 2x-8." +
