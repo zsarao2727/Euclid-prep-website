@@ -16,12 +16,13 @@ const problems = [
     title: "Number Theory Drill 1",
     topic: "number-theory",
     difficulty: "easy",
-    text: "What is the remainder when 2^10 is divided by 7?",
-    answer: "2",
-    hint: "Look for a repeating pattern in powers of 2 modulo 7.",
+    text: "What is the sum of the 20 smallest odd positive integers?",
+    answer: "400",
+    hint: ".",
     solution:
-      "2^1 = 2, 2^2 = 4, 2^3 = 8 ≡ 1 (mod 7). The pattern repeats every " +
-      "3 powers. Since 10 ≡ 1 (mod 3), 2^10 ≡ 2^1 ≡ 2 (mod 7).",
+      "Let S be the sum of all 20 integers. Then, S = 1+3+5+...+35+37+39. Then rewrite S in reverse order, S = 39+37+35+...+5+3+1." +
+      "Adding these 2 representations, we obtain: 2S = 40+40+40+...+40+40+40." +
+      "There are 20 terms in this sum, therefore 2S = (20)(40) = 400.",
   },
   {
     id: 3,
@@ -120,6 +121,18 @@ const problems = [
     solution:
       "72 = 2^3 × 3^2, so the number of positive divisors is " +
       "(3 + 1)(2 + 1) = 12.",
+  },
+  {
+    id: 11,
+    title: "Algebra Drill 4",
+    topic: "algebra",
+    difficulty: "easy",
+    text: "Suppose that p+q+r = 18, and p+q = 5 and q+r =9. What is the value of q?",
+    answer: "q = -4",
+    hint: ".",
+    solution:
+      "Since p+q+r = 18, and p+q = 5, then 5+r = 18, so r = 13. Since q+r = 9 and r = 13, then " +
+      "q+13 = 9, so q = -4.",
   },
 ];
 
