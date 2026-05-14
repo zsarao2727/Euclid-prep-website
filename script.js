@@ -152,7 +152,7 @@ const problems = [
     title: "Algebra Drill 5",
     topic: "algebra",
     difficulty: "hard",
-    text: "Suppose that 1/2w = 1/3y = 1/4z and 1/2w + 1/3y + 1/4z = 1/24. Determine the value of w+y+z."
+    text: "Suppose that 1/2w = 1/3y = 1/4z and 1/2w + 1/3y + 1/4z = 1/24. Determine the value of w+y+z.",
     answer: "78",
     hint: ".",
     solution:
