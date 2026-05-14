@@ -5,7 +5,7 @@ const problems = [
     topic: "algebra",
     difficulty: "easy",
     text: "If 4(x-2) = 2(x-4), what is the value of x?",
-    answer: "x = 0" | "0",
+    answer: "0",
     hint: "Expand the equations, then solve.",
     solution:
       "Since 4(x+2) = 2(x-4), then 4x-8 = 2x-8." +
@@ -128,11 +128,36 @@ const problems = [
     topic: "algebra",
     difficulty: "easy",
     text: "Suppose that p+q+r = 18, and p+q = 5 and q+r =9. What is the value of q?",
-    answer: "q = -4",
+    answer: "-4",
     hint: ".",
     solution:
       "Since p+q+r = 18, and p+q = 5, then 5+r = 18, so r = 13. Since q+r = 9 and r = 13, then " +
       "q+13 = 9, so q = -4.",
+  },
+  {
+    id: 12,
+    title: "Geometry Drill 4",
+    topic: "algebra",
+    difficulty: "medium",
+    text: "The line with the equation 6x+y = 24 has its x-intercept at point P, and its y-intercept at point Q." +
+          "What is an equation of the parabola whose y-intercept is at Q and whose only x-intercept is at P.",
+    answer: "y = 3/2(x-4)^2",
+    hint: "Solve for the intercepts.",
+    solution:
+      "y-intercept = 24 when x is set to 0. Since the parabola only has 1 x-int, write the equation as y = a(x-4)^2." +
+      "Since the y-int is at (0,24), substitute the points in to get 24 = a(0-4)^2, which then gives a = 3/2, so y = 3/2(x-4)^2.",
+  },
+  {
+    id: 13,
+    title: "Algebra Drill 5",
+    topic: "algebra",
+    difficulty: "hard",
+    text: "Suppose that 1/2w = 1/3y = 1/4z and 1/2w + 1/3y + 1/4z = 1/24. Determine the value of w+y+z."
+    answer: "78",
+    hint: ".",
+    solution:
+      "Since 1/2w = 1/3y = 1/4z and 1/2w + 1/3y + 1/4z = 1/24, then each of 1/2w and 1/3y and 1/4z is 1/3 of the whole." +
+      "This gives 1/2w = 1/3y = 1/4z = 1/3 * 1/24 = 1/72. Therefore, 2w = 3y = 4z = 72, so w = 36, y = 24, and z = 18.",  
   },
 ];
 
